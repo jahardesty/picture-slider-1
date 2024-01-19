@@ -1,0 +1,67 @@
+body {
+  background-color: gainsboro;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.toggle {
+  visibility: hidden;
+}
+
+.label {
+  background-color: darkslategrey;
+  width: 80px;
+  height: 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+.toggle:checked + .label {
+  background-color: #d0d0d0;
+}
+
+.ball {
+  background-color: white;
+  width: 37px;
+  height: 37px;
+  border-radius: 50px;
+  position: absolute;
+  top: 1.5px;
+  left: 1.5px;
+  animation: slideOn 0.2s linear forwards;
+}
+
+.toggle:checked + .label .ball {
+    animation: slideOff 0.2s linear forwards;
+}
+
+@keyframes slideOn {
+    0% {
+        transform: translateX(0) scale(1);
+    }
+
+    50% {
+        transform: translateX(20px) scale(2);
+    }
+
+    100% {
+        transform: translateX(40px) scale(1);
+    }
+}
+
+@keyframes slideOff {
+    0% {
+       transform: translateX(40px) scale(1);
+    }
+
+    50% {
+        transform: translateX(20px) scale(1.1);
+    }
+
+    100% {
+        transform: translateX(0px) scale(1);
+    }
