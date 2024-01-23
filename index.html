@@ -16,20 +16,25 @@
     <h1>Picture Slider</h1>
     <div>
       <img
-        src="instrument-1.jpeg"
+        src=""
         alt="Picture of Instruments"
         class="instrument"
+        id="image"
         width="500"
         height="710"
       />
-      <img name="slide" width="500" height="710" />
     </div>
     <div class="container">
-      <button class="btn btn--previous">⬅️ Previous Picture</button>
-      <button class="btn btn--next">➡️ Next Picture</button>
+      <button onclick="prevImage()" ="btn btn--previous" id="btnPrevious">
+        ⬅️ Previous Picture
+      </button>
+      <button onclick="nextImage()" ="btn btn--next" id="btnNext">
+        ➡️ Next Picture
+      </button>
     </div>
-    <input type="checkbox" id="test" class="toggle" />
-    <label for="test" class="label">
+
+    <label class="label">
+      <input type="checkbox" id="colorToggle" class="toggle" />
       <div class="ball"></div>
     </label>
 

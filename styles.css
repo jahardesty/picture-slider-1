@@ -1,6 +1,5 @@
 body {
-  background-color: gainsboro;
-  /* background-color: rgb(58, 58, 58); */
+  background-color: rgb(220, 220, 220);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,7 +21,7 @@ body {
   height: 30px;
   border-radius: 50px;
   cursor: pointer;
-  display: block;
+  display: inline-block;
   position: relative;
 }
 
@@ -38,6 +37,7 @@ body {
   position: absolute;
   top: 1.5px;
   left: 1.5px;
+  transition: transform 0.125s ease-in-out;
 }
 
 .toggle:checked + .label .ball {

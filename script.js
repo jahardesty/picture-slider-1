@@ -1,31 +1,40 @@
 "use strict";
-const btnPrevious = document.querySelector(".btn btn--previous");
-const btnNext = document.querySelector(".btn btn--next");
-const instrumentEl = document.querySelector(".instrument");
-const checkBox = document.querySelector(".test");
+const btnPrevious = document.getElementById("btnPrevious");
+const btnNext = document.getElementById("btnNext");
+let colorToggle = document.getElementById("colorToggle");
+const imageFiles = [
+  "instrument-1.jpeg",
+  "instrument-2.jpeg",
+  "instrument-3.jpeg",
+  "instrument-4.jpeg",
+];
+let currentIndex = 0;
 
-//adding next picture button functionality
-
-let i = 0; //start point
-let images = [];
-let time = 5000;
-
-// image list
-images[0] = "instrument-1.jpeg";
-images[1] = "instrument-2.jpeg";
-images[2] = "instrument-3.jpeg";
-images[3] = "instrument-4.jpeg";
-
-// Change Image
-function changeImg() {
-  document.slide.src = images[i];
-
-  if (i < images.length - 1) {
-    i++;
-  } else {
-    i = 0;
-  }
-  setTimeout("changeImg()", time);
+function changeImage() {
+  const imageEl = document.getElementById("image");
+  imageEl.src = imageFiles[currentIndex];
 }
 
-window.onload = changeImg;
+// Function for Previous Picture button to go back
+function prevImage() {
+  currentIndex = (currentIndex - 1 + imageFiles.length) % imageFiles.length;
+  changeImage();
+}
+
+// Function for Next Picture button to go through multiple pictures
+function nextImage() {
+  currentIndex = (currentIndex + 1) % imageFiles.length;
+  changeImage();
+}
+
+// Toggle button to change the background color...enables dark mode
+colorToggle.addEventListener("change", function () {
+  if (colorToggle.checked) {
+    document.body.style.background = "rgb(58, 58, 58)";
+  } else {
+    document.body.style.background = "rgb(220, 220, 220)";
+  }
+});
+
+// Initialize Function
+changeImage();
