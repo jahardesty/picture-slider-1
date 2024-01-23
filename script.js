@@ -2,6 +2,7 @@
 const btnPrevious = document.getElementById("btnPrevious");
 const btnNext = document.getElementById("btnNext");
 let colorToggle = document.getElementById("colorToggle");
+
 const imageFiles = [
   "instrument-1.jpeg",
   "instrument-2.jpeg",
