@@ -2,6 +2,7 @@
 const btnPrevious = document.getElementById("btnPrevious");
 const btnNext = document.getElementById("btnNext");
 let colorToggle = document.getElementById("colorToggle");
+let myHeading = document.getElementById("myHeading");
 
 const imageFiles = [
   "instrument-1.jpeg",
@@ -32,8 +33,10 @@ function nextImage() {
 colorToggle.addEventListener("change", function () {
   if (colorToggle.checked) {
     document.body.style.background = "rgb(58, 58, 58)";
+    myHeading.style.color = "rgb(220, 220, 220)";
   } else {
     document.body.style.background = "rgb(220, 220, 220)";
+    myHeading.style.color = "rgb(58, 58, 58)";
   }
 });
 
