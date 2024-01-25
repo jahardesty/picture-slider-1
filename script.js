@@ -30,7 +30,7 @@ function nextImage() {
 }
 
 // Toggle button to change the background color...enables dark mode
-colorToggle.addEventListener("change", function () {
+colorToggle.addEventListener('change', function () {
   if (colorToggle.checked) {
     document.body.style.background = "rgb(58, 58, 58)";
     myHeading.style.color = "rgb(220, 220, 220)";

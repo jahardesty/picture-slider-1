@@ -16,8 +16,8 @@ body {
 }
 
 .label {
-  background-color: rgb(58, 58, 58);
-  width: 80px;
+  background-color: rgb(150, 150, 150);
+  width: 78px;
   height: 40px;
   border-radius: 50px;
   cursor: pointer;
@@ -25,9 +25,7 @@ body {
   position: relative;
 }
 
-.toggle:checked + .label {
-  background-color: #d0d0d0;
-}
+
 
 .ball {
   background-color: white;
@@ -42,5 +40,5 @@ body {
 
 .toggle:checked + .ball {
   transform: translateX(100%);
-  background-color: #d0d0d0;
-}
+  background-color: rgb(238, 237, 237);
+  }
